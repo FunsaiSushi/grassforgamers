@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.after-noon {
+    height: 100vh;
+    background: rgb(0, 21, 49);
+    margin: auto;
+    font-size: 13px;
+    position: relative;
+    overflow: hidden;
+    animation: sky 10s linear forwards 9s;
+}
+
+@keyframes sky {
+    20% {
+        background: rgb(1, 31, 70);
+    }
+    40% {
+        background: rgb(3, 52, 116);
+    }
+    60% {
+        background: rgb(11, 81, 172);
+    }
+    80% {
+        background: rgb(34, 111, 212);
+    }
+    100% {
+        background: rgb(75, 153, 255);
+    }
+}
+
+.after-noon::after{
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    transform: translate(35%,-100%);
+    background: #fcfcfc;
+    box-shadow: 0 0 30px #d3e6ff;
+    z-index: 1;
+    animation: moon 13s linear forwards;
+}
+
+@keyframes moon {
+    100%{
+        left: 0;
+        top: 100%;
+    }
+}
+
+.after-noon::before {
+    position: absolute;
+    content: '';
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    top: 100%;
+    left: 70%;
+    background: rgb(255, 244, 206) ;
+    box-shadow: 0 0 40px wheat;
+    animation: sun 12s linear forwards 12s;
+}
+
+@keyframes sun {
+    0%{
+        background: tomato;
+        box-shadow: none;
+    }
+    20%{
+        background: rgb(255,109,83);
+    }
+    30%{
+        background: rgb(255,109,83);
+        box-shadow: 0 0 10px rgb(255,160,184);
+    }
+    50%{
+        background: rgb(255,244, 206);
+        box-shadow: 0 0 40px wheat;
+    }
+    60%{
+        background: rgb(255,244,206);
+        box-shadow: 0 0 40px wheat;
+    }
+    80%{
+        background: rgb(255,247, 220);
+        box-shadow: 0 0 50px wheat, 0 0 60px wheat;
+    }
+    100%{
+        left: 35%;
+        top: -40%;
+    }
+}
+
+.cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('stars.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: dark 13s linear forwards;
+}
+@keyframes dark {
+    20% {
+        opacity: 1;
+    }
+    40% {
+        opacity: .9;
+    }
+    60% {
+        opacity: .7;
+    }
+    80% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* @keyframes dark {
+    20% {
+        filter: brightness(1.7);
+    }
+    40% {
+        filter: brightness(1.3);
+    }
+    60% {
+        filter: brightness(0.9);
+    }
+    80% {
+        filter: brightness(0.5);
+    }
+    100% {
+        filter: brightness(0.1);
+    }
+} */
+
+.bellow {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 40vh;
+    background: url("hhhh.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    z-index: 999;
+    
+}

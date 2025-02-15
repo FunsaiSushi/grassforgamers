@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow</title>
+    <link rel="stylesheet" type="text/css" href="test-style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="/resources/mcbg.jpg" alt="Image 1" class="glow-image" style="--clr: #0f0;">
+        </div>
+        <div class="image-container">
+            <img src="/resources/mcbg2.png" alt="Image 2" class="glow-image" style="--clr: #ff0;">
+        </div>
+    </div>
+    <script>
+        let images = document.querySelectorAll('.glow-image');
+        images.forEach(image => {
+            image.onmousemove = function(e){
+                let x = e.pageX - image.offsetLeft;
+                let y = e.pageY - image.offsetTop;
+                image.style.setProperty('--x', x + 'px');
+                image.style.setProperty('--y', y + 'px');
+            }
+        })
+    </script>
+</body>
+</html>

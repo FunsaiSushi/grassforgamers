@@ -1,0 +1,26 @@
+.curve-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #ccc; /* Optional: Just for visualization */
+}
+
+.arrow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  animation: arrowAnimation 3s linear infinite; /* Adjust duration as needed */
+}
+
+@keyframes arrowAnimation {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    left: 100%;
+    top: 100%;
+  }
+}

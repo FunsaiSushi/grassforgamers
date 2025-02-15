@@ -1,0 +1,209 @@
+@import url('https://fonts.cdnfonts.com/css/pixellari');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'pixellari', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(/resources/mcbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.button-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2; /* Ensure buttons appear on top of the video */
+
+}
+
+a {
+    position: absolute;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.699);
+    font-size: 2em;
+    letter-spacing: .1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #0000005d;
+    height: 60px;
+    width: 200px;
+    line-height: 60px;
+    padding: 0 30px;
+    text-align: center;
+    transition: .5s;
+}
+
+a:hover {
+    color: #0ef;
+    letter-spacing: .25em;
+    text-shadow: 0 0 5px #0ef;
+}
+
+a:nth-child(2) {
+    margin-top: 150px; /* Space between buttons */
+}
+
+a span {
+    position: absolute;
+    display: block;
+    background: #0ef;
+    box-shadow: 0 0 5px #0ef;
+}
+
+a span:nth-child(1) {
+    left: 0;
+    top: 0;
+    width: 50.5%;
+    height: 3px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+a:hover span:nth-child(1) {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+a span:nth-child(2) {
+    right: 0;
+    top: 0;
+    width: 50.5%;
+    height: 3px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+a:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+a span:nth-child(3) {
+    right: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    transition: transform .5s;
+    transition-delay: .4s;
+}
+
+a:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+a span:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    transition: transform .5s;
+    transition-delay: .4s;
+}
+
+a:hover span:nth-child(4) {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+a span:nth-child(5) {
+    left: 0;
+    bottom: 0;
+    width: 50.5%;
+    height: 3px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+    transition-delay: .8s;
+}
+
+a:hover span:nth-child(5) {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+a span:nth-child(6) {
+    right: 0;
+    bottom: 0;
+    width: 50.5%;
+    height: 3px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .5s;
+    transition-delay: .8s;
+}
+
+a:hover span:nth-child(6) {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.grass {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    color: white;
+    font-size: 2em;
+}
+
+.video-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#video-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shooter-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#shooter {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shooter-response-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#shooter-response {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
